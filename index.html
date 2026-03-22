@@ -1,0 +1,64 @@
+{
+  "name": "Article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article headline"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Short summary or subheadline"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full article content in HTML"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "Cover image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "football",
+        "basketball",
+        "tennis",
+        "formula1",
+        "motorsports",
+        "boxing",
+        "athletics",
+        "other"
+      ],
+      "description": "Sport category"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "draft",
+      "description": "Article publication status"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the article is featured on the homepage"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Author display name"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the article was published"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category"
+  ]
+}
